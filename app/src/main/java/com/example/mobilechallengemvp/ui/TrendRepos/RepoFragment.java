@@ -26,7 +26,6 @@ public class RepoFragment extends Fragment implements RepoContract.View {
 
     @Inject
     RepoPresenter presenter;
-
     private RecyclerView recyclerView;
     private RepoAdapter adapter;
     private ImageButton btnScrollTop;
@@ -72,14 +71,14 @@ public class RepoFragment extends Fragment implements RepoContract.View {
 
                 if (layoutManager != null) {
 
-                    // 👉 afficher bouton si pas en haut
+                    //  afficher bouton si pas en haut
                     if (layoutManager.findFirstVisibleItemPosition() > 3) {
                         btnScrollTop.setVisibility(View.VISIBLE);
                     } else {
                         btnScrollTop.setVisibility(View.GONE);
                     }
 
-                    // 👉 pagination
+                    //  pagination
                     if (!isLoading) {
                         int visibleItemCount = layoutManager.getChildCount();
                         int totalItemCount = layoutManager.getItemCount();
@@ -115,16 +114,6 @@ public class RepoFragment extends Fragment implements RepoContract.View {
         adapter.addRepos(repos);       // ajoute les nouveaux repos
         isLoading = false;             // libère le flag pour scroll
         currentPage++;                 // prépare la page suivante
-    }
-
-    @Override
-    public void showLoading() {
-        // Pas nécessaire ici, le footer s’en charge
-    }
-
-    @Override
-    public void hideLoading() {
-        // Pas nécessaire
     }
 
     @Override

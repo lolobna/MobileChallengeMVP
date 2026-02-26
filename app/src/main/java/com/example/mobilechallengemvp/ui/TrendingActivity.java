@@ -18,7 +18,7 @@ public class TrendingActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.trending_main); // layout avec FrameLayout id="container"
+        setContentView(R.layout.trending_main);
 
         // Ajouter le fragment seulement si c'est la première création
         if (savedInstanceState == null) {

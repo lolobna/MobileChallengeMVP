@@ -9,8 +9,6 @@ public interface RepoContract {
     interface View {
         void showRepos(List<Repo> repos);
         void showError(String message);
-        void showLoading();
-        void hideLoading();
     }
 
     interface Presenter {

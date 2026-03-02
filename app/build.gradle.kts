@@ -33,7 +33,10 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
+
+
 }
 
 dependencies {
@@ -59,6 +62,9 @@ dependencies {
 
     // Picasso
     implementation("com.squareup.picasso:picasso:2.8")
+
+    // Paging 3
+    implementation("androidx.paging:paging-runtime:3.2.1")
 
     // Testing
     testImplementation(libs.junit)

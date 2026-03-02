@@ -18,7 +18,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RepoRepository {
-
     private final GithubApi api;
     @Inject
     public RepoRepository(GithubApi api) {
@@ -43,7 +42,6 @@ public class RepoRepository {
                             callback.onError(new Exception("API error"));
                         }
                     }
-
                     @Override
                     public void onFailure(Call<SearchResponse> call, Throwable t) {
                         callback.onError(t);

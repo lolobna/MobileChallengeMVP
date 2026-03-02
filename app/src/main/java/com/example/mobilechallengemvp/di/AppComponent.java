@@ -11,6 +11,5 @@ import dagger.Component;
 @Singleton
 @Component(modules = {NetworkModule.class, RepositoryModule.class})
 public interface AppComponent {
-    void inject(TrendingActivity activity); // pour l'activité
     void inject(RepoFragment fragment); // pour le fragment
 }
